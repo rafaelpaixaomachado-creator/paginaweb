@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Syne:wght@400;700&display=swap" rel="stylesheet">
-    <style>
+
         body {
             display: flex;
             align-items: center;
@@ -81,30 +74,4 @@
             flex-direction: column;
             gap: 5px;
         }
-    </style>
-</head>
-<body>
-    <main class="fonte-tcc">
-        <!-- Topo da página -->
-        <div class="instituicao">Nome da Instituição</div>
-        
-        <!-- Centro da página -->
-        <div class="bloco-central">
-            <div class="autores">Nome do Autor / Aluno</div>
-            
-            <div class="titulos">
-                <div class="titulo-principal">Título Principal do TCC</div>
-                <div class="subtitulo">Subtítulo do Projeto</div>
-            </div>
-        </div>
-
-        <!-- Base da página (Alinhamento padrão de capas) -->
-        <div class="local-data">
-            <div class="projeto-titulo">Projeto de Conclusão de Curso</div>
-            <div>Cidade - UF</div>
-            <div>2026</div>
-        </div>
-    </main>
-</body>
-</html>
-
+    
