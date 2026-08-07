@@ -59,3 +59,115 @@
 
 </body>
 </html>
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Syne:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        main {
+            background-color: white;
+            color: black;
+            width: 100%;
+            max-width: 800px;
+            /* Definição de altura e comportamento para espaçamento vertical automático */
+            height: 1100px; 
+            box-sizing: border-box;
+            padding: 80px 50px;
+            border: 2px solid #000;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            
+            /* CORREÇÃO DO ALINHAMENTO: Transforma o main em flex vertical */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Distribui os blocos igualmente no espaço */
+            align-items: center;
+        }
+        .fonte-tcc {
+            font-family: "Syne", sans-serif;
+        }
+        .instituicao {
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        /* Agrupamento do Autor e Títulos para controle fino de espaçamento */
+        .bloco-central {
+            display: flex;
+            flex-direction: column;
+            gap: 120px; /* Controla o espaço exato entre o autor e os títulos */
+            width: 100%;
+        }
+        .autores {
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .projeto-titulo {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .titulos {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Espaço estrito entre Título e Subtítulo */
+        }
+        .titulo-principal {
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .subtitulo {
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+        /* Bloco inferior para dados de fechamento exigidos em capas */
+        .local-data {
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+    </style>
+</head>
+<body>
+    <main class="fonte-tcc">
+        <!-- Topo da página -->
+        <div class="instituicao">Nome da Instituição</div>
+        
+        <!-- Centro da página -->
+        <div class="bloco-central">
+            <div class="autores">Nome do Autor / Aluno</div>
+            
+            <div class="titulos">
+                <div class="titulo-principal">Título Principal do TCC</div>
+                <div class="subtitulo">Subtítulo do Projeto</div>
+            </div>
+        </div>
+
+        <!-- Base da página (Alinhamento padrão de capas) -->
+        <div class="local-data">
+            <div class="projeto-titulo">Projeto de Conclusão de Curso</div>
+            <div>Cidade - UF</div>
+            <div>2026</div>
+        </div>
+    </main>
+</body>
+</html>
+
