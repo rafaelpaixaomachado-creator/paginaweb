@@ -4,63 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Página</title>
-    
     <!-- Fontes Google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sekuya&display=swap" rel="stylesheet">
-
-    <!-- Estilos CSS Corrigidos -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Sekuya&display=swap" rel="stylesheet">
+    
+    <!-- Estilos CSS -->
     <style>
         body {
             font-family: "Sekuya", system-ui;
+            margin: 0;
+            padding: 20px;
         }
-
         main {
             display: flex;
+            justify-content: space-between;
+            align-items: center;
             max-width: 800px;
             margin: 0 auto;
             border: 1px solid red;
             padding: 16px;
         }
-
+        .conteudo-texto {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .botoes-acoes {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
         .modelo-img {
             width: 80px;
             height: 80px;
+            object-fit: cover;
         }
-
         .texto-verde {
             color: green;
         }
-
         .texto-laranja {
             color: orange;
+            margin: 0;
         }
     </style>
 </head>
- <body>
+<body>
 
     <header>
-        <!-- Conteúdo do cabeçalho aqui ----> 
+        <!-- Conteúdo do cabeçalho aqui -->
     </header>
 
     <main>
-        <p class="texto-laranja">Hello World!</p>
-        
-        <article class="autor">
-            <strong class="texto-verde">Acredite em si mesmo</strong>
-        </article>
-         </article>
-        <const> button</const>
-        <!-- Imagem com link corrigido e classe de tamanho -->
-        <button>like 💓</button><img class="modelo-img" src="imagem-logo.png"
-        <script> </script>
-        <botao class="add turneer"></botao 
+        <!-- Bloco de Textos à Esquerda -->
+        <div class="conteudo-texto">
+            <p class="texto-laranja">Hello World!</p>
+            <article class="autor">
+                <strong class="texto-verde">Acredite em si mesmo</strong>
+            </article>
+        </div>
 
-           <console class="log"></console>
-        <!-- Imagem com link corrigido e classe de tamanho --
-        
-        <div></div>
+        <!-- Bloco de Interação à Direita -->
+        <div class="botoes-acoes">
+            <button>like 💓</button>
+            <img class="modelo-img" src="imagem-logo.png" alt="Logo">
+        </div>
     </main>
 
 </body>
