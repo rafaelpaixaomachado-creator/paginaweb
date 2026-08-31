@@ -1,82 +1,269 @@
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-}
-main {
-    /* CORREÇÃO: Fundo alterado para azul e textos para branco */
-    background-color: #0044cc; /* Substitua pelo tom de azul que desejar */
-    color: white;
+b<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página</title>
     
-    width: 100%;
-    max-width: 800px;
-    height: 1100px; 
-    box-sizing: border-box;
-    padding: 80px 50px;
-    border: 2px solid #000;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    <!-- Fontes Google -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Sekuya&display=swap" rel="stylesheet">
     
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
-    align-items: center;
-}
+    <!-- Estilos CSS Modernizados -->
+    <style>
+        /* Configurações Gerais e Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Sekuya', sans-serif;
+            background-color: #f4f7f6;
+            color: #333333;
+            line-height: 1.6;
+            padding: 20px;
+        }
 
-/* NOVA CLASSE: Força a centralização exata da imagem/logo no eixo horizontal */
-.modelo-img, .logo {
-    display: block;
-    margin: 0 auto;
-    object-fit: contain;
-}
+        /* Cabeçalho */
+        header {
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+        }
 
-.fonte-tcc {
-    font-family: "Syne", sans-serif;
-}
-.instituicao {
-    font-size: 1.3rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-.bloco-central {
-    display: flex;
-    flex-direction: column;
-    gap: 120px; 
-    width: 100%;
-}
-.autores {
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-.projeto-titulo {
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-.titulos {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; 
-}
-.titulo-principal {
-    font-size: 2rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-.subtitulo {
-    font-size: 1.4rem;
-    font-weight: 400;
-}
-.local-data {
-    font-size: 1.1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-       
+        .logo-site {
+            width: 140px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        
+        .logo-site:hover {
+            transform: scale(1.05);
+        }
+
+        /* Container Principal */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* Estrutura do Artigo do Blog (Estilo Card) */
+        article {
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Responsividade para telas maiores (computador) */
+        @media (min-width: 600px) {
+            article {
+                flex-direction: row;
+            }
+        }
+
+        /* Imagem do Blog */
+        .img-blog {
+            width: 100%;
+            height: 250px;
+            object-fit: cover; /* Ajusta a foto sem distorcer */
+        }
+
+        @media (min-width: 600px) {
+            .img-blog {
+                width: 40%;
+                height: auto;
+                min-height: 250px;
+            }
+        }
+
+        /* Conteúdo de texto interno do artigo */
+        .artigo-conteudo {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+        }
+
+        .artigo-conteudo h2 {
+            font-size: 1.5rem;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .artigo-autor {
+            font-size: 0.9rem;
+            color: #666666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .artigo-texto {
+            font-size: 1rem;
+            color: #4a4a4a;
+            margin-bottom: 15px;
+        }
+
+        .artigo-fonte {
+            font-size: 0.85rem;
+            color: #888888;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        /* Botão de Coração Interno */
+        .btn-coracao {
+            align-self: flex-start;
+            background: #fff5f5;
+            border: 1px solid #ffe3e3;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: background 0.2s;
+        }
+
+        .btn-coracao:hover {
+            background: #ffe3e3;
+        }
+
+        /* Elementos Avulsos de Texto */
+        .texto-laranja {
+            color: #ff6b00;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .autor {
+            text-align: center;
+            background: transparent;
+            box-shadow: none;
+            padding: 10px;
+        }
+
+        .texto-verde {
+            color: #2e7d32;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+
+        /* Seção Inferior de Componentes e Botões adicionais */
+        .container-acoes {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .modelo-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%; /* Transforma a imagem de exemplo em círculo */
+            border: 3px solid #e0e0e0;
+        }
+
+        /* Estilização Geral dos Botões */
+        button {
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        #btn-like {
+            background-color: #e91e63;
+            color: white;
+            box-shadow: 0 4px 6px rgba(233, 30, 99, 0.2);
+        }
+
+        #btn-like:hover {
+            background-color: #c2185b;
+            transform: translateY(-2px);
+        }
+
+        .add.turneer {
+            background-color: #007bff;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
+        }
+
+        .add.turneer:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Logotipo Oficial da Pasta -->
+        <img class="logo-site" src="imagem.logo.png" alt="Logo Teknoedu">
+    </header>
+    
+    <main>
+        <!-- Card do Artigo Principal -->
+        <article>
+            <img class="img-blog" src="https://placehold.co" alt="Descrição da imagem para acessibilidade">
+            <div class="artigo-conteudo">
+                <h2>Título da Nova Curiosidade</h2>
+                <p class="artigo-autor">Por: rafael</p>
+                <p class="artigo-texto">Texto da curiosidade tecnológica aqui.</p>
+                <p class="artigo-fonte">Fonte: The National Museum of Computing</p>
+                <button class="btn-coracao">❤️ <span>0</span></button>
+            </div>
+        </article>
+
+        <!-- Chamadas Centrais -->
+        <p class="texto-laranja">Hello World!</p>
+
+        <article class="autor">
+            <strong class="texto-verde">explorando lugares unicos</strong>
+        </article>
+
+        <!-- Barra Inferior com a Imagem de Exemplo e Botões de Ações -->
+        <div class="container-acoes">
+            <img class="modelo-img" src="https://placehold.co" alt="Imagem de Exemplo">
+            <button id="btn-like">like 💓</button>
+            <button class="add turneer">Adicionar</button>
+        </div>
+    </main>
+
+    <!-- Script JavaScript -->
+    <script>
+        const button = document.getElementById('btn-like');
+        button.addEventListener('click', () => {
+            console.log('Botão clicado!');
+        });
+    </script>
+</body>
+</html>
