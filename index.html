@@ -9,31 +9,54 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sekuya&display=swap" rel="stylesheet">
-
-    <!-- Estilos CSS Corrigidos -->
     
+    <!-- Estilos CSS Embutidos -->
+    <style>
+        body {
+            font-family: 'Sekuya', sans-serif;
+        }
+        .texto-laranja {
+            color: orange;
+        }
+        .texto-verde {
+            color: green;
+        }
+        .modelo-img {
+            width: 150px; /* Define um tamanho padrão para a imagem */
+            height: auto;
+        }
+    </style>
 </head>
- <body>
+<body>
 
     <header>
-        <!-- Conteúdo do cabeçalho aqui ----> 
+        <!-- Conteúdo do cabeçalho aqui -->
     </header>
 
     <main>
         <p class="texto-laranja">Hello World!</p>
+        
         <article class="autor">
             <strong class="texto-verde">rd games</strong>
         </article>
-        <const> button</const>
-        <!-- Imagem com link corrigido e classe de tamanho -->
-        <button>like 💓</button><img class="modelo-img" src="https://google.com" 
-        <script> </script>
-        <botao class="add turneer"></botao 
 
-           <console class="log">    ) </console>
-        }
-        <div></div>
+        <!-- Botão de Like -->
+        <button id="btn-like">like 💓</button>
+        
+        <!-- Imagem Corrigida -->
+        <img class="modelo-img" src="https://placeholder.com" alt="Imagem de Exemplo">
+        
+        <!-- Botão Adicional Corrigido -->
+        <button class="add turneer">Adicionar</button>
     </main>
+
+    <!-- Script JavaScript Corrigido -->
+    <script>
+        const button = document.getElementById('btn-like');
+        button.addEventListener('click', () => {
+            console.log('Botão clicado!');
+        });
+    </script>
 
 </body>
 </html>
