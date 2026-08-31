@@ -20,27 +20,29 @@
             color: green;
         }
         .modelo-img {
-            width: 150px; /* Define um tamanho padrão para a imagem */
+            width: 150px;
             height: auto;
         }
-        .img-blog {
-            width: 300px;
+        /* Classe CSS para controlar o tamanho do seu novo logotipo */
+        .logo-site {
+            width: 120px; /* Você pode aumentar ou diminuir este valor se preferir */
             height: auto;
+            border-radius: 8px; /* Deixa os cantos suavemente arredondados */
         }
     </style>
 </head>
 <body>
     <header>
-        <!-- Conteúdo do cabeçalho aqui -->
+        <!-- O caminho já busca o arquivo que você salvou na pasta -->
+        <img class="logo-site" src="imagem.logo.png" alt="Logo Teknoedu">
     </header>
     <main>
         <article>
-            <!-- CORREÇÃO 1: Substituído por uma imagem fictícia funcional para o seu Blog -->
-            
-               <div>
+            <img src="imagem-blog.png" alt="Descrição da imagem para acessibilidade">
+            <div>
                 <h2>Título da Nova Curiosidade</h2>
                 <br>
-                <p class="artigo-autor">Por: Nome do Autor</p>
+                <p class="artigo-autor">Por: rafael</p>
                 <br>
                 <p>Texto da curiosidade tecnológica aqui.</p>
                 <br>
@@ -52,13 +54,13 @@
         <p class="texto-laranja">Hello World!</p>
 
         <article class="autor">
-            <strong class="texto-verde">rd games</strong>
+            <strong class="texto-verde">explorando lugares unicos</strong>
         </article>
 
         <!-- Botão de Like -->
         <button id="btn-like">like 💓</button>
 
-        <!-- CORREÇÃO 2: Alterado de placeholder.com para a URL real geradora de imagens do placehold.co -->
+        <!-- Imagem Corrigida com Mock Funcional -->
         <img class="modelo-img" src="https://placehold.co" alt="Imagem de Exemplo">
 
         <!-- Botão Adicional Corrigido -->
