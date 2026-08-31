@@ -8,70 +8,70 @@
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Sekuya&display=swap" rel="stylesheet">
-    
-    <!-- Estilos CSS -->
+    <!-- Estilos CSS Embutidos -->
     <style>
         body {
-            font-family: "Sekuya", system-ui;
-            margin: 0;
-            padding: 20px;
+            font-family: 'Sekuya', sans-serif;
         }
-        main {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 800px;
-            margin: 0 auto;
-            border: 1px solid red;
-            padding: 16px;
-        }
-        .conteudo-texto {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        .botoes-acoes {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .modelo-img {
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
+        .texto-laranja {
+            color: orange;
         }
         .texto-verde {
             color: green;
         }
-        .texto-laranja {
-            color: orange;
-            margin: 0;
+        .modelo-img {
+            width: 150px; /* Define um tamanho padrão para a imagem */
+            height: auto;
+        }
+        .img-blog {
+            width: 300px;
+            height: auto;
         }
     </style>
 </head>
 <body>
-
     <header>
         <!-- Conteúdo do cabeçalho aqui -->
     </header>
-
     <main>
         <article>
-        <!-- Bloco de Textos à Esquerda -->
-        <div class="conteudo-texto">
-            <p class="texto-laranja">Hello World!</p>
-            <article class="autor">
-                <strong class="texto-verde">Acredite em si mesmo</strong>
-            </article>
-        </div>
+            <!-- CORREÇÃO 1: Substituído por uma imagem fictícia funcional para o seu Blog -->
+            <img class="img-blog" src="https://placehold.co" alt="Descrição da imagem para acessibilidade">
+            <div>
+                <h2>Título da Nova Curiosidade</h2>
+                <br>
+                <p class="artigo-autor">Por: Nome do Autor</p>
+                <br>
+                <p>Texto da curiosidade tecnológica aqui.</p>
+                <br>
+                <p class="artigo-fonte">Fonte: The National Museum of Computing</p>
+                <button>❤️ <span>0</span></button>
+            </div>
+        </article>
 
-        <!-- Bloco de Interação à Direita -->
-        <div class="botoes-acoes">
-            <button>like 💓</button>
-            <img class="modelo-img" src="imagem-logo.png" alt="Logo">
-        </div>
-    </article>
+        <p class="texto-laranja">Hello World!</p>
+
+        <article class="autor">
+            <strong class="texto-verde">rd games</strong>
+        </article>
+
+        <!-- Botão de Like -->
+        <button id="btn-like">like 💓</button>
+
+        <!-- CORREÇÃO 2: Alterado de placeholder.com para a URL real geradora de imagens do placehold.co -->
+        <img class="modelo-img" src="https://placehold.co" alt="Imagem de Exemplo">
+
+        <!-- Botão Adicional Corrigido -->
+        <button class="add turneer">Adicionar</button>
     </main>
 
+    <!-- Script JavaScript Corrigido -->
+    <script>
+        const button = document.getElementById('btn-like');
+        button.addEventListener('click', () => {
+            console.log('Botão clicado!');
+        });
+    </script>
 </body>
 </html>
+
