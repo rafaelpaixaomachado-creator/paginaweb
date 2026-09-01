@@ -4,80 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Página</title>
+    
     <!-- Fontes Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sekuya&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com" rel="stylesheet">
+
     <!-- Estilos CSS Embutidos -->
     <style>
-        body {
-            font-family: 'Sekuya', sans-serif;
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
         }
-        .texto-laranja {
-            color: orange;
+        .texto-laranja { 
+            color: orange; 
+            font-weight: bold;
         }
-        .texto-verde {
-            color: green;
+        .texto-verde { 
+            color: green; 
         }
-        .modelo-img {
-            width: 150px;
-            height: auto;
+        .modelo-img { 
+            width: 150px; 
+            height: auto; 
+            display: block;
+            margin: 15px 0;
         }
-        /* Classe CSS para controlar o tamanho do seu logotipo */
-        .logo-site {
-            width: 120px;
-            height: auto;
-            border-radius: 8px; /* Deixa os cantos suavemente arredondados */
+        .logo-site { 
+            width: 120px; 
+            height: auto; 
+            border-radius: 8px; 
+        }
+        article {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        button {
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: #fff;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        button:hover {
+            background: #f0f0f0;
         }
     </style>
 </head>
 <body>
+
     <header>
-        <!-- Logotipo oficial Teknoedu inserido no cabeçalho -->
-        <img class="logo-site" src="imagem.logo.png" alt="um livro com um cerebro em cima das paginas e um icone de wifi e uma lampada encima do livro">
+        <!-- Logo do Site -->
+        <img class="logo-site" src="imagem-logo.png" alt="Um livro com um cérebro em cima das páginas, um ícone de wifi e uma lâmpada acesa">
     </header>
-    
+
     <main>
+        <!-- Artigo Principal -->
         <article>
-            <img src="imagem-blog.png" alt="Descrição da imagem para acessibilidade">
+            <img src="imagem-blog.png" alt="Ilustração sobre o primeiro bug da história da computação">
             <div>
                 <h2>Título da Nova Curiosidade</h2>
-                <br>
-                <p class="artigo-autor">Por: rafael</p>
-                <br>
-                <p>Texto da curiosidade tecnológica aqui.
-                    O primeiro bug de computador da história ocorreu em 9 de setembro de 1947, quando uma mariposa real ficou presa em um dos relés eletromecânicos do computador Harvard Mark II, operado pela equipe de Grace Hopper. O inseto foi removido e colado no diário de bordo do laboratório com a anotação "primeiro caso real de um bug sendo encontrado", eternizando o termo "debugging" na computação. 
+                <p class="artigo-autor">Por: Rafael</p>
+                <p>
+                    Texto da curiosidade tecnológica aqui. O primeiro bug de computador da história ocorreu em 9 de setembro de 1947, 
+                    quando uma mariposa real ficou presa em um dos relés eletromecânicos do computador Harvard Mark II, operado pela 
+                    equipe de Grace Hopper. O inseto foi removido e colado no diário de bordo do laboratório com a anotação 
+                    "primeiro caso real de um bug sendo encontrado", eternizando o termo "debugging" na computação.
                 </p>
-                <br>
                 <p class="artigo-fonte">Fonte: The National Museum of Computing</p>
+                
+                <!-- Botão de Curtir do Artigo -->
                 <button>❤️ <span>0</span></button>
             </div>
         </article>
 
+        <!-- Elementos de Texto Secundários -->
         <p class="texto-laranja">Hello World!</p>
-
+        
         <article class="autor">
-            <strong class="texto-verde">explorando lugares unicos</strong>
+            <strong class="texto-verde">Explorando lugares únicos</strong>
         </article>
 
-        <!-- Botão de Like -->
-        <button id="btn-like">like 💓</button>
-
-        <!-- Imagem de exemplo ajustada com tamanho para renderizar corretamente -->
+        <!-- Imagem Corrigida com Mock Funcional da Placehold.co -->
+        <!-- Configurada para 150x150 pixels com fundo cinza escuro e texto branco -->
         <img class="modelo-img" src="https://placehold.co" alt="Imagem de Exemplo">
 
-        <!-- Botão Adicional Corrigido -->
-        <button class="add turneer">Adicionar</button>
+        <!-- Botões de Ação do Usuário -->
+        <div class="acoes">
+            <button id="btn-like">Like 💓</button>
+            <button class="add turneer">Adicionar</button>
+        </div>
     </main>
 
-    <!-- Script JavaScript Corrigido -->
+    <!-- Script JavaScript -->
     <script>
         const button = document.getElementById('btn-like');
-        button.addEventListener('click', () => {
-            console.log('Botão clicado!');
-        });
+        if (button) {
+            button.addEventListener('click', () => {
+                console.log('Botão de Like clicado!');
+                alert('Você curtiu esta página!');
+            });
+        }
     </script>
 </body>
 </html>
-
-
