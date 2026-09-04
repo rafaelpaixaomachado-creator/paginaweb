@@ -1,132 +1,356 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Página</title>
-    <!-- Fontes Google -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com" rel="stylesheet">
-    <!-- Estilos CSS Embutidos -->
-    <style>
-        body {
-            font-family: 'Sekuya', sans-serif;
+<!DOCTYPE html> <html lang="pt-br"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minha Página</title>
+
+<!-- Fontes Google -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sevillanas&display=swap" rel="stylesheet">
+
+<!-- Estilos CSS -->
+<style>
+
+    body {
+        font-family: 'Sevillanas', cursive;
+        margin: 0;
+        padding: 20px;
+        background-color: #f5f5f5;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .placeholder-icon-vector {
+        width: 150px;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .texto-laranja {
+        color: orange;
+    }
+
+    .texto-verde {
+        color: green;
+    }
+
+    .modelo-img {
+        width: 150px;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    /* Logo do site */
+    .logo-site {
+        width: 120px;
+        height: auto;
+        border-radius: 8px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Retângulo azul claro */
+    .retangulo-decorativo {
+        width: 100%;
+        height: 40px;
+        background-color: #add8e6;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+    }
+
+    /* Artigos */
+    article {
+        display: flex;
+        gap: 20px;
+        background-color: white;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    article img {
+        width: 180px;
+        height: 130px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    article div {
+        flex: 1;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+
+    .artigo-autor {
+        color: #555;
+    }
+
+    .artigo-fonte {
+        color: #777;
+    }
+
+    /* Botões */
+    button {
+        padding: 10px 18px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        background-color: #eeeeee;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        opacity: 0.85;
+    }
+
+    /* Botão principal de Like */
+    #btn-like {
+        background-color: #ffe6e6;
+    }
+
+    /* Área inferior */
+    .botoes {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* Autor */
+    .autor {
+        margin: 20px 0;
+        font-size: 20px;
+    }
+
+    /* Contador de curtidas dos artigos */
+    .contador-like {
+        background-color: #ffe6e6;
+    }
+
+    /* Responsividade para celular */
+    @media (max-width: 600px) {
+
+        article {
+            flex-direction: column;
         }
-        .texto-laranja {
-            color: orange;
-        }
-        .texto-verde {
-            color: green;
-        }
-        .modelo-img {
-            width: 150px;
+
+        article img {
+            width: 100%;
             height: auto;
         }
-        /* Classe CSS para controlar o tamanho do seu novo logotipo */
-        .logo-site {
-            width: 120px; /* Você pode aumentar ou diminuir este valor se preferir */
-            height: auto;
-            border-radius: 8px; /* Deixa os cantos suavemente arredondados */
+
+        .botoes {
+            flex-wrap: wrap;
         }
-        /* Classe para o novo retângulo azul claro decorativo */
-        .retangulo-decorativo {
-            width: 100%;            /* Ocupa a largura total disponível */
-            height: 40px;           /* Altura do retângulo (ajuste se quiser maior ou menor) */
-            background-color: #add8e6; /* Cor azul claro (LightBlue) */
-            margin-top: 15px;       /* Espaçamento acima do retângulo */
-            margin-bottom: 20px;    /* Espaçamento abaixo do retângulo antes do artigo */
-            border-radius: 4px;     /* Opcional: cantos levemente arredondados para suavizar */
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <!-- O caminho já busca o arquivo que você salvou na pasta -->
-        <img class="placeholder-icon-vector" src="imagem-logo.png" alt="um livro com um cerebro em cima das paginas e um icone de wifi e uma lâmpada encima do livro">
-    </header>
-    <main>
-        <!-- CORRIGIDO: Imagem de Destaque usando URL funcional do Placehold.co -->
-        <img class="logo-site" src="https://placehold.co" alt="Placeholder da Nova Curiosidade">
+    }
 
-        <!-- NOVO ELEMENTO: Retângulo cheio azul claro decorativo -->
-        <div class="retangulo-decorativo"></div>
+</style>
 
-        <!-- ======================================================== -->
-        <!-- FIM DOS CÓDIGOS NOVOS -->
-        <!-- ======================================================== -->
+</head> <body>
+<header>
 
-        <!-- CORRIGIDO: Bloco de artigos limpo e sem duplicações -->
-        <article>
-            <img src="imagem-blog.png" alt="Descrição da imagem para acessibilidade">
-            <div>
-                <h2>Título da Nova Curiosidade</h2>
-                <br>
-                <p class="artigo-autor">Por: rafael</p>
-                <br>
-                <p>Texto da curiosidade tecnológica aqui. O primeiro bug de computador da história ocorreu em 9 de setembro de 1947, quando uma mariposa real ficou presa em um dos relés eletromecânicos do computador Harvard Mark II, operado pela equipe de Grace Hopper. O inseto foi removido e colado no diário de bordo do laboratório com a anotação "primeiro caso real de um bug sendo encontrado", eternizando o termo "debugging" na computação. </p>
-                <br>
-                <p class="artigo-fonte">Fonte: The National Museum of Computing</p>
-                <button>  <span> </span></button>
-            </div>
-        </article>
-    
-        <p class="texto-laranja">Hello World!</p>
+    <!-- Logo local do site -->
+    <img
+        class="placeholder-icon-vector"
+        src="imagem-logo.png"
+        alt="Um livro com um cérebro sobre as páginas, um ícone de Wi-Fi e uma lâmpada">
 
-        <article class="autor">
-            <strong class="texto-verde">explorando lugares unicos</strong>
-        </article>
+</header>
 
-        <!-- Segundo bloco de artigo -->
-        <article>
-            <img src="imagem-blog.png" alt="Descrição da imagem para acessibilidade">
-            <div>
-                <h2>Título da Nova Curiosidade</h2>
-                <br>
-                <p class="artigo-autor">Por: Nome do Autor</p>
-                <br>
-                <p>Texto da curiosidade tecnológica aqui.</p>
-                <br>
-                <p class="artigo-fonte">Fonte: The National Museum of Computing</p>
-                <button> <span> </span></button>
-            </div>
-        </article>
+<main>
 
-        <!-- Seção inferior de botões e imagens -->
-        <div style="margin-top: 20px;">
-           
-           <script>
-  const button = document.getElementById('btn-like');
-  
-  if (button) {
-    button.addEventListener('click', () => {
-      // Exibe a notificação na tela
-      alert('Você curtiu esta publicação! 💓');
-      
-      // Opcional: muda o texto do botão para indicar que foi curtido
-      button.textContent = 'Curtido! 💖';
-      button.style.backgroundColor = '#ffe6e6';
+    <!-- Imagem de destaque corrigida -->
+    <img
+        class="logo-site"
+        src="https://placehold.co/120x120/add8e6/000000?text=Logo"
+        alt="Placeholder da Nova Curiosidade">
+
+    <!-- Retângulo azul claro -->
+    <div class="retangulo-decorativo"></div>
+
+
+    <!-- ====================================================== -->
+    <!-- PRIMEIRO ARTIGO -->
+    <!-- ====================================================== -->
+
+    <article>
+
+        <img
+            src="imagem-blog.png"
+            alt="Imagem relacionada à curiosidade tecnológica">
+
+        <div>
+
+            <h2>Título da Nova Curiosidade</h2>
+
+            <p class="artigo-autor">
+                Por: Rafael
+            </p>
+
+            <p>
+                O primeiro caso famoso envolvendo um bug de computador
+                aconteceu em 9 de setembro de 1947, quando uma mariposa
+                real ficou presa em um dos relés eletromecânicos do
+                computador Harvard Mark II, operado pela equipe de Grace Hopper.
+            </p>
+
+            <p>
+                O inseto foi removido e registrado no diário de bordo
+                do laboratório. O episódio ficou famoso na história da
+                computação e ajudou a popularizar a associação da palavra
+                "bug" com problemas em computadores.
+            </p>
+
+            <p class="artigo-fonte">
+                Fonte: The National Museum of Computing
+            </p>
+
+            <!-- Botão de curtida -->
+            <button class="contador-like">
+                ❤️ <span>0</span>
+            </button>
+
+        </div>
+
+    </article>
+
+
+    <!-- Texto laranja -->
+    <p class="texto-laranja">
+        Hello World!
+    </p>
+
+
+    <!-- Texto verde -->
+    <article class="autor">
+
+        <strong class="texto-verde">
+            Explorando lugares únicos
+        </strong>
+
+    </article>
+
+
+    <!-- ====================================================== -->
+    <!-- SEGUNDO ARTIGO -->
+    <!-- ====================================================== -->
+
+    <article>
+
+        <img
+            src="imagem-blog.png"
+            alt="Descrição da imagem para acessibilidade">
+
+        <div>
+
+            <h2>Título da Nova Curiosidade</h2>
+
+            <p class="artigo-autor">
+                Por: Nome do Autor
+            </p>
+
+            <p>
+                Texto da curiosidade tecnológica aqui.
+            </p>
+
+            <p class="artigo-fonte">
+                Fonte: The National Museum of Computing
+            </p>
+
+            <!-- Botão de curtida -->
+            <button class="contador-like">
+                ❤️ <span>0</span>
+            </button>
+
+        </div>
+
+    </article>
+
+
+    <!-- ====================================================== -->
+    <!-- SEÇÃO INFERIOR -->
+    <!-- ====================================================== -->
+
+    <div class="botoes">
+
+        <!-- Botão de Like -->
+        <button id="btn-like">
+            Like 💓
+        </button>
+
+        <!-- Imagem de exemplo corrigida -->
+        <img
+            class="modelo-img"
+            src="https://placehold.co/150x100/add8e6/000000?text=Imagem"
+            alt="Imagem de exemplo">
+
+        <!-- Botão Adicionar -->
+        <button class="add turneer">
+            Adicionar
+        </button>
+
+    </div>
+
+</main>
+
+
+<!-- ========================================================== -->
+<!-- JAVASCRIPT -->
+<!-- ========================================================== -->
+
+<script>
+
+    /*
+     * BOTÃO PRINCIPAL DE LIKE
+     *
+     * O script está no final da página para garantir
+     * que o botão já exista quando o JavaScript for executado.
+     */
+
+    const button = document.getElementById('btn-like');
+
+    if (button) {
+
+        button.addEventListener('click', () => {
+
+            alert('Você curtiu esta publicação! 💓');
+
+            button.textContent = 'Curtido! 💖';
+
+            button.style.backgroundColor = '#ffe6e6';
+
+        });
+
+    }
+
+
+    /*
+     * CONTADORES DE CURTIDAS DOS ARTIGOS
+     */
+
+    const likeButtons = document.querySelectorAll('.contador-like');
+
+    likeButtons.forEach((likeButton) => {
+
+        likeButton.addEventListener('click', () => {
+
+            const contador = likeButton.querySelector('span');
+
+            let quantidade = Number(contador.textContent);
+
+            quantidade++;
+
+            contador.textContent = quantidade;
+
+        });
+
     });
-  }
+
 </script>
 
-            <!-- Botão de Like -->
-            <button id="btn-like">like 💓</button>
-            <!-- Imagem com Mock Funcional -->
-            <img class="modelo-img" src="https://placehold.co" alt="Imagem de Exemplo">
-            <!-- Botão Adicional Corrigido -->
-            <button class="add turneer">Adicionar</button>
-        </div>
-    </main>
-
-    <!-- Script JavaScript Corrigido -->
-    <script>
-        const button = document.getElementById('btn-like');
-        if (button) {
-            button.addEventListener('click', () => {
-                console.log('Botão clicado!');
-            });
-        }
-    </script>
-</body>
-</html>
+</body> </html>
