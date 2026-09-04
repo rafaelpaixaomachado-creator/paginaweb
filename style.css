@@ -224,3 +224,14 @@ button {
     background-color: #0056b3;
     transform: translateY(-2px);
 }
+.btn-tema-escuro{
+position:fixed;
+bottom: 16px;
+right: 16px;
+font-size: 32px;
+padding: 17px;
+background-color: #101111;
+border-radius: 10%;
+border: none;
+cursor: pointer;
+}
