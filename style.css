@@ -230,14 +230,16 @@ button {
   cursor: pointer;
   z-index: 1000; /* Garante que fique acima de tudo */
 }
+
+article {
+  padding: 16px;
+  filex: 1 1 25%;
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+/* o asterisco aplica a regra a todos os elementos do site*/
 {
- btn-tema-escuro.
-
-
-
-
-
-
+  transition:background-color 0.3s ease;
 
 
 
