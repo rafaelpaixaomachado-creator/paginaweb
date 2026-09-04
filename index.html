@@ -94,6 +94,21 @@
 
         <!-- Seção inferior de botões e imagens -->
         <div style="margin-top: 20px;">
+            <script>
+  const button = document.getElementById('btn-like');
+  
+  if (button) {
+    button.addEventListener('click', () => {
+      // Exibe a notificação na tela
+      alert('Você curtiu esta publicação! 💓');
+      
+      // Opcional: muda o texto do botão para indicar que foi curtido
+      button.textContent = 'Curtido! 💖';
+      button.style.backgroundColor = '#ffe6e6';
+    });
+  }
+</script>
+
             <!-- Botão de Like -->
             <button id="btn-like">like 💓</button>
             <!-- Imagem com Mock Funcional -->
